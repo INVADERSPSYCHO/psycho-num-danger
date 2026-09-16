@@ -15,12 +15,12 @@ from pydantic import BaseModel
 # ── Config ──────────────────────────────────────────────────────────────────
 BASE = os.path.dirname(os.path.abspath(__file__))
 HF_INDEX_BASE = os.environ.get(
-    "ICMR_HF_INDEX_BASE",
-    "https://huggingface.co/datasets/Nasskeke/icrm-hitek-full-db-mixed/resolve/main",
+    "",
+    "",
 ).rstrip("/")
-INDEX_SOURCE = os.environ.get("ICMR_INDEX_SOURCE", "remote").lower()
-PARALLELISM = int(os.environ.get("ICMR_PARALLEL", "2"))
-THREADS_PER_CONN = int(os.environ.get("ICMR_THREADS_PER_CONN", "2"))
+INDEX_SOURCE = os.environ.get("", "remote").lower()
+PARALLELISM = int(os.environ.get("EL", "2"))
+THREADS_PER_CONN = int(os.environ.get("S_PER_CONN", "2"))
 DUPLICATE_CAP = 2
 
 # 🔥 API Key – environment se lo
